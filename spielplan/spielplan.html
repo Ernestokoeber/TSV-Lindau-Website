@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TSV Lindau Basketball – Spielplan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Haupt-CSS deiner Landingpage -->
+    <link rel="stylesheet" href="/landingpage/TSV_Lindau_Basketball.css">
+    <!-- Zusatz-CSS nur für den Spielplan-Bereich -->
+    <link rel="stylesheet" href="/spielplan/spielplan.css">
+
+    <script src="/spielplan/spielplan.js" defer></script>
+</head>
+<body>
+    <!-- du kannst hier denselben Header verwenden wie auf der Startseite,
+         wichtig ist nur, dass darunter der Spielplan-Content kommt -->
+
+    <main class="page-main">
+        <section class="hero-section">
+            <div class="hero-inner">
+                <h1>Spielplan – TSV Lindau Basketball</h1>
+                <p>
+                    Alle Spiele und Ergebnisse der Herrenmannschaft in der Bezirksklasse Schwaben Süd.
+                    Die Daten werden zentral gepflegt und hier automatisch angezeigt.
+                </p>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="controls-inner">
+                <div class="control-group">
+                    <label for="teamFilter">Team / Gegner:</label>
+                    <input type="text" id="teamFilter" placeholder="z.B. Lindau, Isny, Kaufbeuren …">
+                </div>
+
+                <div class="control-group">
+                    <label>
+                        <input type="checkbox" id="futureOnly" checked>
+                        Nur kommende Spiele anzeigen
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <h2>Herren 1 – Bezirksklasse Schwaben Süd</h2>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Uhrzeit</th>
+                        <th>Heim</th>
+                        <th>Gast</th>
+                        <th>Ergebnis</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    <!-- wird per JS gefüllt -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; <span id="currentYear"></span> TSV Lindau Basketball</span>
+            <div class="footer-links">
+                <a href="/footer/impressum/impressum.html">Impressum</a>
+                <a href="/footer/datenschutz/datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

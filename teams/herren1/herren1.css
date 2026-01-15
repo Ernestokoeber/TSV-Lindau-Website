@@ -1,0 +1,450 @@
+/* Grundlayout */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #0b1013;
+    color: #f5f5f5;
+    line-height: 1.5;
+}
+
+/* Kopfbereich */
+
+.main-header {
+    background: #020609e0;
+    border-bottom: 2px solid #ff8c00;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo-main {
+    height: 52px;
+}
+
+.logo-secondary {
+    height: 40px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+    background: #ff8c00;
+    color: #000;
+}
+
+.main-nav a.active {
+    background: #008f4a;
+}
+
+/* Mobile Navigation Button */
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #ff8c00;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.3rem;
+    color: #ff8c00;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    position: relative;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #002b18, #004b2d 40%, #291400);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.22;
+    background-image: radial-gradient(circle at 10% 20%, #ff8c00 0, transparent 55%),
+                      radial-gradient(circle at 80% 70%, #00c774 0, transparent 55%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem 1rem 2.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #ffddad;
+}
+
+/* Sections allgemein */
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #ff8c00;
+    padding-left: 0.75rem;
+}
+
+.section-header p {
+    color: #d3d3d3;
+}
+
+/* Teaminfo */
+
+.section-teaminfo {
+    background: #0f1519;
+    border-bottom: 1px solid #1f2933;
+    border-top: 1px solid #1f2933;
+}
+
+.teaminfo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.teaminfo-card {
+    background: #131a20;
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid #1f2933;
+}
+
+.teaminfo-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #ff8c00;
+}
+
+/* Kader */
+
+.section-roster {
+    background: #090d10;
+}
+
+.roster-filter {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.roster-filter label {
+    font-size: 0.95rem;
+}
+
+.roster-filter select {
+    background: #131a20;
+    color: #f5f5f5;
+    border-radius: 999px;
+    border: 1px solid #ff8c00;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.95rem;
+}
+
+.roster-table-wrapper {
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid #1f2933;
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 420px;
+}
+
+.roster-table thead {
+    background: #111821;
+}
+
+.roster-table th,
+.roster-table td {
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.roster-table th {
+    font-weight: 600;
+    color: #ffddad;
+    border-bottom: 1px solid #1f2933;
+}
+
+.roster-table tbody tr:nth-child(even) {
+    background: #11151a;
+}
+
+.roster-table tbody tr:nth-child(odd) {
+    background: #0b1013;
+}
+
+.roster-table tbody tr:hover {
+    background: #182028;
+}
+
+/* Sortierbare Header + Icons */
+
+.roster-table th.sortable-number,
+.roster-table th.sortable-year,
+.roster-table th.sortable-player {
+    cursor: pointer;
+    position: relative;
+    padding-right: 1.4rem; /* Platz für das Icon */
+    transition: background 0.15s ease;
+}
+
+.roster-table th.sortable-number:hover,
+.roster-table th.sortable-year:hover,
+.roster-table th.sortable-player:hover {
+    background: #182028;
+}
+
+/* Grundzustand: unsichtbares Icon, damit Spalten nicht springen */
+.roster-table th.sortable-number::after,
+.roster-table th.sortable-year::after,
+.roster-table th.sortable-player::after {
+    content: "";
+    position: absolute;
+    right: 0.45rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: #ffddad;
+    opacity: 0; /* nur bei aktivem Sortierstatus sichtbar */
+}
+
+/* Aufsteigend sortiert */
+.roster-table th.is-sorted-asc::after {
+    content: "▲";
+    opacity: 1;
+}
+
+/* Absteigend sortiert */
+.roster-table th.is-sorted-desc::after {
+    content: "▼";
+    opacity: 1;
+}
+
+/* Spielplan */
+
+.section-schedule {
+    background: #0f1519;
+    border-top: 1px solid #1f2933;
+}
+
+.schedule-table-wrapper {
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid #1f2933;
+    margin-bottom: 1rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.schedule-table thead {
+    background: #111821;
+}
+
+.schedule-table th {
+    font-weight: 600;
+    color: #ffddad;
+    border-bottom: 1px solid #1f2933;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #11151a;
+}
+
+.schedule-table tbody tr:nth-child(odd) {
+    background: #0b1013;
+}
+
+.schedule-table tbody tr:hover {
+    background: #182028;
+}
+
+.league-link {
+    margin-top: 0.5rem;
+}
+
+.league-link a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.league-link a:hover {
+    text-decoration: underline;
+}
+
+/* Philosophie */
+
+.section-philosophy {
+    background: #090d10;
+    border-top: 1px solid #1f2933;
+}
+
+.philosophy-content {
+    max-width: 800px;
+    font-size: 0.98rem;
+    color: #e2e2e2;
+}
+
+.philosophy-content p + p {
+    margin-top: 0.75rem;
+}
+
+/* Footer */
+
+.main-footer {
+    border-top: 2px solid #ff8c00;
+    background: #020609;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    height: 32px;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.footer-right a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-separator {
+    color: #555;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0.5rem;
+        background: #020609f0;
+        flex-direction: column;
+        padding: 0.75rem;
+        border-radius: 10px;
+        border: 1px solid #ff8c00;
+        min-width: 180px;
+        display: none;
+    }
+
+    .main-nav ul.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .logo-main {
+        height: 46px;
+    }
+
+    .logo-secondary {
+        display: none; /* bei Bedarf auf Mobile ausblenden */
+    }
+}

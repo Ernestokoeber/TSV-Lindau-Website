@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+    
+    <head>
+        <style></style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TSV Lindau Basketball</title>
+        <link rel="stylesheet" type="text/css" href="/landingpage/TSV_Lindau_Basketball.css">    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <script src="/landingpage/cookie_banner.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="/landingpage/cookie_banner.css">
+    </head>
+        
+    <body>
+        <!-- Cookie Banner -->
+            <div id="cookie-banner" class="cookie-banner">
+                <div class="cookie-banner-inner">
+                    <h2>Cookie-Einstellungen</h2>
+                    <p>
+                    Wir verwenden Cookies und ähnliche Technologien, um unsere Website bereitzustellen, zu analysieren und
+                    um Inhalte von Drittanbietern (z. B. Google Maps, YouTube, Instagram, Facebook) anzuzeigen. 
+                    Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten.
+                    </p>
+
+                    <div class="cookie-categories">
+                    <div class="cookie-category">
+                        <label>
+                        <input type="checkbox" checked disabled>
+                        <span><strong>Notwendige Cookies</strong> (immer aktiv)</span>
+                        </label>
+                        <p class="cookie-category-desc">
+                        Erforderlich für den Betrieb der Website, Sicherheit und Ihre Cookie-Auswahl.
+                        Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
+                        </p>
+                    </div>
+
+                    <div class="cookie-category">
+                        <label>
+                        <input type="checkbox" id="cookie-functional">
+                        <span><strong>Funktionale Cookies</strong></span>
+                        </label>
+                        <p class="cookie-category-desc">
+                        Zur Bereitstellung erweiterter Funktionen, z. B. Einbettung von Google Maps, externe Google Fonts, 
+                        YouTube-Videos, Instagram-Feeds.
+                        </p>
+                    </div>
+
+                    <div class="cookie-category">
+                        <label>
+                        <input type="checkbox" id="cookie-analytics">
+                        <span><strong>Analyse / Statistik</strong></span>
+                        </label>
+                        <p class="cookie-category-desc">
+                        Zur anonymisierten Auswertung der Nutzung unserer Website, z. B. Google Analytics.
+                        </p>
+                    </div>
+
+                    <div class="cookie-category">
+                        <label>
+                        <input type="checkbox" id="cookie-marketing">
+                        <span><strong>Marketing / Tracking</strong></span>
+                        </label>
+                        <p class="cookie-category-desc">
+                        Zur Anzeige personalisierter Inhalte und Werbung, z. B. Facebook-Pixel, Meta-Tracking, Instagram, 
+                        YouTube-Werbetracking.
+                        </p>
+                    </div>
+                    </div>
+
+                    <div class="cookie-buttons">
+                    <button id="cookie-accept-all" class="btn btn-primary">Alle akzeptieren</button>
+                    <button id="cookie-save-selection" class="btn btn-secondary">Auswahl speichern</button>
+                    <button id="cookie-only-necessary" class="btn btn-tertiary">Nur notwendige</button>
+                    </div>
+
+                    <p class="cookie-more-info">
+                    Weitere Informationen finden Sie in unserer 
+                    <a href="/footer/datenschutz/datenschutz.html">Datenschutzerklärung</a>.
+                    </p>
+                </div>
+            </div>
+
+        <!-- Optional: Button im Footer, um Einstellungen erneut zu öffnen -->
+            <button id="cookie-settings-button" class="cookie-settings-button">
+            Cookie-Einstellungen
+            </button>
+
+        
+        <header>
+            
+            <!-- LIVE-SPIELPLAN ÜBER DER WEISSEN LEISTE -->
+            <div class="liveplan" aria-label="Live-Spielplan">
+            <button class="lp-btn lp-prev" aria-label="Vorheriges Spiel">‹</button>
+
+            <div class="lp-viewport">
+                <div id="live-fixtures" class="lp-track">
+            
+                <!-- Spiele werden per JS hier eingefügt -->
+                </div>
+            </div>
+
+            <button class="lp-btn lp-next" aria-label="Nächstes Spiel">›</button>
+            </div>
+
+            <div class="top-line"></div>
+            <div class="extra-line"></div>
+            <div class="backgroundlogo"></div>
+
+            <div class="wrapper"></div>
+            <div class="header"></div>
+            <div class="navigation"></div>
+            <div class="white-outer"></div>
+            <div class="TSVLogotransparent" style="height: auto;"></div>
+        
+            <div class="headline-container">
+                <h1 class="headline big">175 <span class="small">Jahre</span></h1>
+                <h2 class="headline mid">TSV Lindau e.V. 1850</h2>
+                <h1 class="headline big">66 <span class="small">Jahre Basketball</span></h1>
+            </div>
+            
+            <div class="menu-section">
+                <nav class="main-nav" aria-label="Hauptmenü">
+                    <ul class="menu">
+                    
+                    <!-- NEWS -->
+                        <li class="has-sub">
+                            <a href="/news/news.html" class="menu-link">News</a>
+                                <ul class="submenu">
+                                    <li><a href="/news/newsarchiv/newsarchiv.html">News-Archiv</a></li>
+                                    <li><a href="/news/newsletter/newsletter.html">Newsletter</a></li>
+                                    <li><a href="/news/socialmedia/socialmedia.html">Social-media</a></li>
+                                    <li><a href="/news/mediathek/mediathek.html">Mediathek</a></li>
+                                </ul>
+                        </li>
+
+                    <!-- SPIELPLAN -->
+                        <li class="has-sub">
+                            <a href="/spielplan/spielplan.html" class="menu-link">Spielplan</a>
+                                <ul class="submenu">
+                                    <li><a href="/spielplan/ergebnisse&spielplan/ergebnisse.html">Ergebnisse & Spielplan</a></li>
+                                    <li><a href="/spielplan/spielplantabelle/tabelle.html">Tabelle</a></li>
+                                </ul>
+                        </li>
+
+                    <!-- TEAMS -->
+                        <li class="has-sub">
+                            <a href="/teams/teams.html" class="menu-link">Teams</a>
+                                <ul class="submenu">
+                                    <li><a href="/teams/herren1/herren1.html">Herren 1</a></li>
+                                    <li><a href="/teams/u18/u18.html">U18</a></li>
+                                    <li><a href="/teams/u16/u16.html">U16</a></li>
+                                    <li><a href="/teams/u14/u14.html">U14</a></li>
+                                    <li><a href="/teams/u12/u12.html">U12</a></li>
+                                    <li><a href="/teams/ueber40/ueber40.html">Ü40</a></li>
+                                </ul>
+                        </li>
+
+                    <!-- KONTAKT (ohne Untermenü) -->
+                        <li><a href="/kontakt/kontakt.html" class="menu-link">Kontakt</a></li>
+
+                    <!-- MORE -->
+                        <li class="has-sub">
+                            <a href="/more/more.html" class="menu-link">More…</a>
+                                <ul class="submenu">
+                                    <li><a href="/more/verein/verein.html">Verein</a></li>
+                                    <li><a href="/more/sponsoren/sponsoren.html">Sponsoren</a></li>
+                                    <li><a href="/more/historie/historie.html">Historie</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        
+            <div><img class="TSVLogo1" src="/assets/Header/TSVLogotransparent.png" alt="TSV Logohaupt"></div>
+            <div class="background-number">175</div>
+
+            <h1 class="number175">175</h1>
+
+            <a href="https://www.tsvlindau.de" class="logo-link">
+                <div class="logo-polygon">
+                    <img src="/assets/Header/TSVLogotransparent.png" alt="TSV Logo">
+                </div>
+            </a>
+
+            <div class="social-section">
+                <a href="https://www.facebook.com/p/TSV-Lindau-Basketball-100070026405232/" target="_blank" rel="noopener">
+                    <img class="facebookbutton" src="/assets/Header/facebookbutton.png" alt="Facebook">
+                </a>
+                
+                <a href="https://www.instagram.com/tsv.lindau.basketball/?hl=de" target="_blank" rel="noopener">
+                    <img class="instagrambutton" src="/assets/Header/instagrambutton.png" alt="Instagram">
+                </a>
+                
+                <a href="https://whatsapp.com" target="_blank" rel="noopener">
+                    <img class="whatsappbutton" src="/assets/Header/whatsappbutton.png" alt="WhatsApp">
+                </a>
+                
+                <a href="https://youtube.com" target="_blank" rel="noopener">
+                    <img class="youtubebutton" src="/assets/Header/youtubebutton.png" alt="YouTube">
+                </a>
+            </div>
+            
+        </header>
+
+    <div class="content-wrapper">      
+        <main class="content">
+            
+            <!-- Linke Spalte: 3×2 News-Grid -->
+                <div class="news-grid">
+
+            <!-- Box 1 -->
+                <a href="https://www.tsvlindaubasketball.de/news/basketball-camp-2025"
+                target="_blank" rel="noopener" class="news-box" aria-label="Basketball-Camp 2025">
+                <img src="/assets/mainsection/bildobenlinks.jpg" alt="Basketball-Camp 2025">
+                    <p>Bist du unter 18 Jahre alt und willst Basketball lernen? Melde dich an...</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            <!-- Box 2 -->
+                <a href="https://www.tsvlindaubasketball.de/news/saisonende-2025"
+                target="_blank" rel="noopener" class="news-box" aria-label="Saison 2025 ist vorbei">
+                <img src="/assets/mainsection/bildobenmitte.jpg" alt="Saisonende 2025">
+                    <p>Die Saison ist vorbei! Unsere Teams legen eine Pause ein. Die nächste Saison startet bald…</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            <!-- Box 3 -->
+                <a href="https://www.tsvlindaubasketball.de/news/herren-gegen-heising-kottern"
+                target="_blank" rel="noopener" class="news-box" aria-label="Herren-Spielbericht">
+                <img src="/assets/mainsection/bildobenrechts.jpg" alt="Spielbericht Herren">
+                    <p>Unsere 1. Herren unterliegt Heising-Kottern in einem packenden Spiel. Mehr dazu im Bericht…</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            <!-- Box 4 -->
+                <a href="https://www.tsvlindaubasketball.de/news/trainer-werden"
+                target="_blank" rel="noopener" class="news-box" aria-label="Trainer werden">
+                <img src="/assets/mainsection/bilduntenlinks.jpg" alt="Trainer werden?">
+                    <p>Du willst Trainer werden? Du willst Schiedsrichter werden?...</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            <!-- Box 5 -->
+                <a href="https://www.tsvlindaubasketball.de/news/sieg-1-herren"
+                target="_blank" rel="noopener" class="news-box" aria-label="Sieg 1. Herren">
+                <img src="/assets/mainsection/bilduntenmittejpg.jpg" alt="Sieg 1. Herren">
+                    <p>Die 1. Herren gibt zuhause den Ton an…</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            <!-- Box 6 -->
+                <a href="https://www.tsvlindaubasketball.de/news/verletzungssorgen"
+                target="_blank" rel="noopener" class="news-box" aria-label="Verletzungssorgen">
+                <img src="/assets/mainsection/bilduntenrechts.jpg" alt="Verletzungssorgen">
+                    <p>Erneute Verletzungssorgen bei den Herren…</p>
+                    <span class="read-more">weiterlesen…</span>
+                </a>
+
+            </div>
+
+            <!-- Rechte Spalte: Banner (unabhängig von der Höhe) -->
+                <aside class="sidebar">
+                    <a href="https://www.forthree.com/?s=TSV+Lindau+Basketball&post_type=product&type_aws=true"
+                    target="_blank" rel="noopener" class="banner-link" aria-label="Zum Shop">
+                    <img src="/assets/mainsection/43banner.png" alt="43Banner">
+                    </a>
+                </aside>
+        </main>
+    </div>
+        
+        <secondarysection>
+            <!-- H A L L E N – I N F O -->
+            <section class="hallen-info" aria-label="Hallen-Informationen">
+            <h2 class="hi-title">Hallen‑Info & Trainingszeiten</h2>
+
+            <div class="hi-grid">
+                <!-- 1. Halle -->
+                <aside class="hi-map-card">
+                <iframe
+                    class="hi-map"
+                    title=" Sporthalle BodenseeGymnasium Lindau"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Bodenseesporthalle%20Lindau&output=embed">
+                </iframe>
+                <div class="hi-map-actions">
+                    <a class="hi-btn" target="_blank" rel="noopener"
+                    href="https://maps.google.com/?q=Bodenseesporthalle%20Lindau">In Google Maps öffnen</a>
+                    <button class="hi-btn hi-copy" data-copy="BodenseeGymnasioum Lindau, Bregenzer Str. 147, 88131 Lindau (B)">
+                    Adresse kopieren
+                    </button>
+                </div>
+                </aside>
+
+                <!-- 2. Halle -->
+                <aside class="hi-map-card">
+                <iframe
+                    class="hi-map"
+                    title="Jahnturnhalle Lindau Insel"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2594.7931743251975!2d9.6853147!3d47.5488243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b0d20c26e8d91%3A0x28e2a7b86de712fd!2sJahnturnhalle%20Lindau%20Insel!5e1!3m2!1sde!2sde!4v1755129428008!5m2!1sde!2sde">
+                </iframe>
+
+                <div class="hi-map-actions">
+                    <a class="hi-btn" target="_blank" rel="noopener"
+                    href="https://maps.app.goo.gl/DKAbra8f8nwXepVb6">
+                    In Google Maps öffnen
+                    </a>
+
+                    <button class="hi-btn hi-copy"
+                            data-copy="Jahnturnhalle, Rotkreuzplatz 1, 88131 Lindau">
+                    Adresse kopieren
+                    </button>
+                </div>
+                </aside>
+
+                <!-- 3. Halle -->
+                <aside class="hi-map-card">
+                <iframe
+                    class="hi-map"
+                    title="Dreifachturnhalle Lindau"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d648.5805350762705!2d9.694900067423063!3d47.55833798123426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b0c2ee9a4efa9%3A0xe815a9c7654fa4eb!2sTSV%20Lindau-Handball!5e1!3m2!1sde!2sde!4v1755129018921!5m2!1sde!2sde">
+                </iframe>
+
+                <div class="hi-map-actions">
+                    <a class="hi-btn" target="_blank" rel="noopener"
+                    href="https://maps.app.goo.gl/yjBN2vs422RVJKwW9">
+                    In Google Maps öffnen
+                    </a>
+
+                    <button class="hi-btn hi-copy"
+                            data-copy="Dreifachturnhalle, Reutiner Straße 1, 88131 Lindau">
+                    Adresse kopieren
+                    </button>
+                </div>
+                </aside>
+
+
+                <!-- Adresse & Kontakt -->
+                <article class="hi-card hi-address">
+                <h3>Adresse & Kontakt</h3>
+                <ul class="hi-list">
+                    <li><strong>BodenseeGymnasium Halle Lindau</strong></li>
+                    <li>Reutiner Straße 14</li>
+                    <li>88131 Lindau (Bodensee)</li>
+                    
+                    <li><strong>Jahnturnhalle Lindau-Insel</strong></li>
+                    <li>Rotkreuzplatz 1</li>
+                    <li>88131 Lindau (Bodensee)</li>
+                    
+                    <li><strong>Dreifachturnhalle</strong></li>
+                    <li>Reutiner Straße 1</li>
+                    <li>88131 Lindau (Bodensee)</li>
+                </ul>
+
+                <div class="hi-contact">
+                    <a class="hi-chip" href="tel:+499382123456">☎  +49 9382 123456</a>
+                    <a class="hi-chip" href="mailto:basketball@tsvlindau.de">✉  basketball@tsvlindau.de</a>
+                </div>
+
+                <div class="hi-hints">
+                    <p>🅿️ Parken: direkt an der Halle (kostenfrei, begrenzte Plätze)</p>
+                    <p>🚍 ÖPNV:<strong>Bus Linie 5 Grenzsiedlung/Zech</strong><br>- Haltestelle <strong>BodenseeGymnasium</strong></p>
+                    <p>⏱️ Einlass: 1 Std. vor Spielbeginn</p>
+                </div>
+                </article>
+
+                <!-- Trainingszeiten -->
+                    <article class="hi-card hi-trainings">
+                        <h3>Trainingszeiten</h3>
+
+                    <div class="hi-train-grid">
+                        <div class="hi-train-item">
+                            <h4>Herren 1 <span class="badge">Erwachsene</span></h4>
+                            <ul>
+                            <li>Di • 20:15–22:00</li>
+                            <li>Fr • 20:15–22:00</li>
+                            </ul>
+                        </div>
+
+                        <div class="hi-train-item">
+                            <h4>U18</h4>
+                            <ul>
+                            <li>Di • 20:15–22:00 mit Herren</li>
+                            <li>Fr • 18:35–20:15 regulär</li>
+                            <li>Fr • 20:15–22:00 mit Herren</li>
+                            </ul>
+                        </div>
+
+                        <div class="hi-train-item">
+                            <h4>U16</h4>
+                            <ul>
+                            <li>Mi • 18:45–20:15</li>
+                            <li>Fr • 18:35–20:15 mit U18</li>
+                            </ul>
+                        </div>
+
+                        <div class="hi-train-item">
+                            <h4>U14</h4>
+                            <ul><li>Mi • 18:00–19:30</li></ul>
+                        </div>
+
+                        <div class="hi-train-item">
+                            <h4>U12</h4>
+                            <ul><li>Mi • 16:30–18:00 Jahnturnhalle</li></ul>
+                        </div>
+
+                        <div class="hi-train-item hi-train-item--highlight">
+                            <h4>Hobby <span class="flag">Offen für Alle</span></h4>
+                            <ul>
+                            <li>Mo • 20:15–22:00 Technik-Training</li>
+                            <li><strong>Mi • 20:30–22:00 offen für Alle!</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                        <div class="hi-cta">
+                            <a class="hi-btn" href="/probetraining/probetraining.html">Probetraining anfragen</a>
+                        </div>
+                </article>
+            </div>
+            </section>
+        </secondarysection>
+        
+        <footer class="footer">
+            <div class="footer-sponsors">
+                <h3>Sponsoren / Partner</h3>
+                <div class="sponsor-logos">
+                <a href="https://www.wuerschinger.de" target="_blank" rel="noopener">
+                    <img src="/assets/secondarysection/wuerschingersponsor.png" alt="Würschinger Heizung Klima Sanitär">
+                </a>
+                <a href="https://www.bodenseewohnbau.de" target="_blank" rel="noopener">
+                    <img src="/assets/secondarysection/bodenseewohnbausponsor.png" alt="Bodenseewohnbau">
+                </a>
+                <a href="https://www.forthree.com" target="_blank" rel="noopener">
+                    <img src="/assets/secondarysection/43sponsor.png" alt="FOR THREE 43 Basketball">
+                </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                &copy; 2025 TSV Lindau | Basketball
+                </div>
+                <div class="footer-links">
+                <a href="/footer/presse/presse.html">Presse</a>
+                <a href="/footer/datenschutz/datenschutz.html">Datenschutz</a>
+                <a href="/footer/impressum/impressum.html">Impressum</a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bar"></div>
+    
+        <!-- js Integration ins HTML Dokument -->
+        <script src="/landingpage/TSV_Lindau_Basketball.js"></script>
+    </body>
+
+</html>

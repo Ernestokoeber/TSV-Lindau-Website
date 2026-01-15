@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TSV Lindau Basketball – Herren 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet für Herren 1 -->
+    <link rel="stylesheet" href="/teams/herren1/herren1.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="header-inner">
+        <a href="/index.html" class="logo-link">
+            <img src="/assets/Header/logo.png" alt="TSV Lindau Logo" class="logo-main">
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="/index.html">Startseite</a></li>
+                <li><a href="/teams/teams.html">Teams</a></li>
+                <li><a href="/footer/presse/presse.html">Presse</a></li>
+                <li><a href="/kontakt/kontakt.html">Kontakt</a></li>
+                <li><a href="/footer/impressum/impressum.html">Impressum</a></li>
+                <li><a href="/footer/datenschutz/datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO / KOPF -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>1. Herren – TSV Lindau Basketball</h1>
+            <p class="hero-subtitle">Saison 2025/26 · Bezirksliga Schwaben Süd</p>
+        </div>
+    </section>
+
+    <!-- Teaminfo -->
+    <section class="section section-teaminfo">
+        <div class="section-header">
+            <h2>Teaminfo</h2>
+            <p>Alle wichtigen Informationen zur Herren-1-Mannschaft im Überblick.</p>
+        </div>
+        <div class="teaminfo-grid">
+            <div class="teaminfo-card">
+                <h3>Wettbewerb</h3>
+                <p><strong>Bezirksliga Schwaben Süd</strong></p>
+            </div>
+            <div class="teaminfo-card">
+                <h3>Heimhalle</h3>
+                <p><strong>Dreifachturnhalle Lindau</strong><br>Reutiner Str. 4 · 88131 Lindau</p>
+            </div>
+            <div class="teaminfo-card">
+                <h3>Trainerteam</h3>
+                <p>
+                    Head Coach: <strong>Ernesto Köber</strong><br>
+                    Co-Trainer: <strong>Alex Heine</strong>
+                </p>
+            </div>
+            <div class="teaminfo-card">
+                <h3>Trainingszeiten</h3>
+                <p>
+                    Dienstag: <strong>20:15 – 22:00 Uhr</strong><br>
+                    Freitag: <strong>20:15 – 22:00 Uhr</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KADER -->
+    <section class="section section-roster">
+        <div class="section-header">
+            <h2>Kader</h2>
+            <p>Aktuelle Spielerübersicht mit Trikotnummer, Position und Jahrgang.</p>
+        </div>
+
+        <div class="roster-filter">
+            <label for="positionFilter">Nach Position filtern:</label>
+            <select id="positionFilter">
+                <option value="all">Alle Positionen</option>
+                <option value="PG">Point Guard</option>
+                <option value="SG">Shooting Guard</option>
+                <option value="SF">Small Forward</option>
+                <option value="PF">Power Forward</option>
+                <option value="C">Center</option>
+            </select>
+        </div>
+
+        <div class="roster-table-wrapper">
+            <table class="roster-table" id="rosterTable">
+                <thead>
+                <tr>
+                    <th class="sortable-number" title="Nach Nummer sortieren">#</th>
+                    <th class="sortable-player" title="Nach Spieler (Nachname) sortieren">Spieler</th>
+                    <th>Position</th>
+                    <th class="sortable-year" title="Nach Jahrgang sortieren">Jahrgang</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-position="PG">
+                    <td>23</td>
+                    <td>Haobin Tan</td>
+                    <td>PG</td>
+                    <td>?</td>
+                </tr>
+                <tr data-position="PG">
+                    <td>15</td>
+                    <td>Alex Heine</td>
+                    <td>PG</td>
+                    <td>1979</td>
+                </tr>
+                <tr data-position="SG">
+                    <td>21</td>
+                    <td>Linus Holst</td>
+                    <td>SG</td>
+                    <td>2004</td>
+                </tr>
+                <tr data-position="SG">
+                    <td>4</td>
+                    <td>Jewgeni Ishutin</td>
+                    <td>SG/PG</td>
+                    <td>?</td>
+                </tr>
+                <tr data-position="SG">
+                    <td>?</td>
+                    <td>Lukas Fischer</td>
+                    <td>SG/SF</td>
+                    <td>2007</td>
+                </tr>
+                <tr data-position="SG">
+                    <td>89</td>
+                    <td>Martin Fischer</td>
+                    <td>SG/SF</td>
+                    <td>?</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>17</td>
+                    <td>Kostiantyn Ustianskyi</td>
+                    <td>SF/SG</td>
+                    <td>2007</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>?</td>
+                    <td>Harry Nguyen</td>
+                    <td>SF</td>
+                    <td>2002</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>?</td>
+                    <td>Demian Geyer</td>
+                    <td>SF</td>
+                    <td>?</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>?</td>
+                    <td>Ludwig Heller</td>
+                    <td>SF</td>
+                    <td>1981</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>7</td>
+                    <td>Christian Lummer</td>
+                    <td>SF</td>
+                    <td>1981</td>
+                </tr>
+                <tr data-position="SF">
+                    <td>14</td>
+                    <td>Moritz Laukamp</td>
+                    <td>SF</td>
+                    <td>2006</td>
+                </tr>
+                <tr data-position="PF">
+                    <td>10</td>
+                    <td>Erik Dollinger</td>
+                    <td>PF/SF</td>
+                    <td>?</td>
+                </tr>
+                <tr data-position="PF">
+                    <td>11</td>
+                    <td>Stephan Ebers</td>
+                    <td>PF</td>
+                    <td>1988</td>
+                </tr>
+                <tr data-position="PF">
+                    <td>5</td>
+                    <td>Ernesto Köber</td>
+                    <td>PF</td>
+                    <td>1989</td>
+                </tr>
+                <tr data-position="C">
+                    <td>13</td>
+                    <td>Jijo Cherian Cherian</td>
+                    <td>C/PF</td>
+                    <td>1995</td>
+                </tr>
+                <tr data-position="C">
+                    <td>12</td>
+                    <td>Adnan Gazun</td>
+                    <td>C</td>
+                    <td>?</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SPIELPLAN / ERGEBNISSE -->
+    <section class="section section-schedule">
+        <div class="section-header">
+            <h2>Spielplan & Ergebnisse</h2>
+            <p>Voraussichtlicher Spielplan – Ergebnisse laufend aktualisieren.</p>
+        </div>
+
+        <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                    <th>Heim</th>
+                    <th>Gast</th>
+                    <th>Ergebnis</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- kommende Spiele -->
+                <tr>
+                    <td>23.11.2025</td>
+                    <td>17:00</td>
+                    <td>TSV Lindau</td>
+                    <td>VFL Buchloe 2</td>
+                    <td>– : –</td>
+                </tr>
+                <tr>
+                    <td>30.11.2025</td>
+                    <td>15:30</td>
+                    <td>TSV Ottobeuren 2</td>
+                    <td>TSV Lindau</td>
+                    <td>– : –</td>
+                </tr>
+                <!-- vergangene Spiele -->
+                <tr>
+                    <td>16.11.2025</td>
+                    <td>17:00</td>
+                    <td>TSV Lindau</td>
+                    <td>TV Isny</td>
+                    <td>66 : 59</td>
+                </tr>
+                <tr>
+                    <td>08.11.2025</td>
+                    <td>15:30</td>
+                    <td>TSV Sonthofen</td>
+                    <td>TSV Lindau</td>
+                    <td>58 : 62</td>
+                </tr>
+                <tr>
+                    <td>18.10.2025</td>
+                    <td>18:00</td>
+                    <td>DJK Kaufbeuren 2</td>
+                    <td>TSV Lindau</td>
+                    <td>71 : 45</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHIE -->
+    <section class="section section-philosophy">
+        <div class="section-header">
+            <h2>Teamphilosophie</h2>
+            <p>Wofür die 1. Herren des TSV Lindau stehen.</p>
+        </div>
+        <div class="philosophy-content">
+            <p>
+                Die Herrenmannschaft des TSV Lindau Basketball steht für Einsatz, Teamgeist und Disziplin.
+                Unser Ziel ist es, mit einer aggressiven Defense und cleverem, strukturiertem Offense-Basketball
+                dauerhaft in der Liga oben mitzuspielen, bei Erfüllung der Saisonziele auch den Aufstieg zu schaffen
+                und junge Spieler schrittweise an das Herrenniveau heranzuführen.
+            </p>
+            <p>
+                Neben dem sportlichen Erfolg ist uns ein respektvolles Miteinander innerhalb des Teams sowie
+                gegenüber Gegnern, Schiedsrichtern und Zuschauern besonders wichtig. Wir wollen den Basketball
+                in Lindau positiv repräsentieren und die Jugendspieler motivieren, ihren eigenen Weg im Verein
+                zu gehen.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <img src="/assets/Header/TSVLogotransparent.png" alt="TSV Lindau Logo klein" class="footer-logo">
+            <span>TSV Lindau Basketball – Herren</span>
+        </div>
+        <div class="footer-right">
+            <a href="/index.html">Zur Startseite</a>
+            <span class="footer-separator">|</span>
+            <a href="/footer/impressum/impressum.html">Impressum</a>
+            <span class="footer-separator">|</span>
+            <a href="/footer/datenschutz/datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+
+<script src="/teams/herren1/herren1.js"></script>
+</body>
+</html>

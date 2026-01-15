@@ -1,0 +1,666 @@
+/* =========================
+   Landing Page TSV Lindau Basketball (bereinigt)
+   ========================= */
+
+/* Hauptseite Hintergrund */
+body{
+  background-color: rgb(232, 161, 77);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* Positionierung oben im orangen Bereich */
+.liveplan{
+  position: absolute;
+  top: 5px;           /* Abstand von oben */
+  left: 120px;         /* Platz fürs Vereinslogo lassen */
+  right: 120px;        /* Platz für Social Icons */
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3000;
+}
+
+/* Sichtfenster */
+.lp-viewport{
+  flex: 1;
+  overflow-x: hidden;        /* Scrollbar versteckt*/
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth; /* sanftes Scrollen */
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.lp-viewport::-webkit-scrollbar {
+  display: none;        /* Chrome, Edge, Safari */
+}
+
+/* Track mit allen Spielen nebeneinander */
+.lp-track{
+  display: flex;
+  align-items: stretch;
+  white-space: nowrap;
+}
+
+/* Einzelne Spielkarte */
+.lp-card{
+  display: grid;
+  grid-template-columns: 160px 1fr 60px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 16px;
+  min-width: 350px; /* Breite einer Karte */
+  border-right: 1px solid rgba(0,0,0,.05);
+}
+
+/* Meta-Infos */
+.lp-meta{
+  display: grid;
+  gap: 4px;
+  font-weight: 700;
+}
+.lp-meta .lp-date{ font-size: 14px; color:#333; }
+.lp-meta .lp-time{ font-size: 18px; }
+.lp-meta .lp-md  { font-size: 12px; color:#555; }
+
+/* Teams */
+.lp-team{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+.lp-name{
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lp-logo{
+  width: 40px; height: 40px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.lp-logo img{ width: 100%; height: 100%; object-fit: contain; }
+
+/* Spielstand */
+.lp-score{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Pfeile links/rechts */
+.lp-btn{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  border-radius: 10px;
+  width: 34px; height: 34px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0; /* nicht schrumpfen */
+}
+.lp-btn:hover{ background: #f9f9f9; }
+
+/* Responsive Anpassung */
+@media (max-width: 1100px){
+  .liveplan{ left: 20px; right: 20px; }
+  .lp-card{ grid-template-columns: 140px 1fr 50px 1fr; min-width: 300px; }
+}
+@media (max-width: 780px){
+  .lp-card{ grid-template-columns: 120px 1fr 40px 1fr; gap: 6px; min-width: 260px; }
+  .lp-meta .lp-md{ display:none; }
+}
+
+/* 175 Jahre / 66 Jahre Headline */
+.headline-container{
+  position: relative;
+  top: 120px;
+  right: 61%;
+  margin-left: 20px;
+  font-family: "Monoton", sans-serif;
+  color: #fff;
+  user-select: none;
+  line-height: .9;
+}
+.headline{ margin: 0 0 5px 0; }
+.big{ font-size: 45px; }
+.mid{ font-size: 30px; }
+.small{ font-size: 20px; vertical-align: middle; }
+
+/* Weiße Linien als Headerbar */
+.top-line{
+  position: relative; /* statt absolute */
+  top: 50px;              /* kein fixer Abstand mehr */
+  width: 70%;
+  right: -31.5%;
+  height: 130px;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 80px 100%);
+}
+.extra-line{
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 38%;
+  height: 45px;
+  background-color:#fff;
+}
+
+/* Linkes grünes Polygon + Logo */
+.backgroundlogo{
+  position: absolute;
+  top: 155px;
+  left: 0;
+  width: 100px;
+  height: 90px;
+  background-color: rgb(0, 100, 0);
+  user-select: none;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+}
+.logo-link{ display: inline-block; }
+.logo-polygon{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 165px;
+  left: 2px;
+}
+.logo-polygon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* TSV Lindau Logo zentriert im Content */
+.TSVLogo1{
+  height: 500px;
+  width: 450px;
+  display: block;
+  margin-top: 25px;
+  margin-left: 640px;
+  user-select: none;
+  position: relative;
+  z-index: 10;
+}
+
+/* Riesige Hintergrundzahl 175 */
+.background-number{
+  position: absolute;
+  height:fit-content;
+  top: 580px;
+  left: 930px;
+  align-content: center;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-family: "Monoton", sans-serif;
+  font-size: clamp(200px, 40vw, 600px);
+  color: #fff;
+  opacity: .30;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 175 als Abschluss in der Headersection */
+.number175{
+  font-family: "Monoton", sans-serif;
+  font-size: 100px;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+  position: relative;
+  top: 375px;
+  right: 300px;
+}
+
+/* Header Grundlayout (nur Position-Context, keine Menükonflikte) */
+header{ position: relative; display:flex; flex-wrap:wrap; align-items:center; padding:60px 20px; }
+
+/* Social Media Buttons oben rechts */
+.social-section{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-right: 20px;
+  position: absolute;
+  right: 50px;
+  top: 120px;
+  z-index: 1500;
+}
+.social-section img{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+.social-section img:hover{ transform: scale(1.1); }
+
+/* =========================
+   Menüleiste + Dropdown
+   ========================= */
+
+/* Menücontainer oben rechts, über allen Headergrafiken */
+.menu-section{
+  position: absolute;
+  top: 200px;
+  right: 40px;
+  overflow: visible;
+  z-index: 2000;
+}
+
+/* Hauptmenü horizontal */
+.menu{
+  list-style: none;
+  display: flex;
+  gap: 32px;     /* 25px -> konsistent auf 32px wie unten vorgesehen */
+  margin: 0;
+  padding: 0;
+}
+.menu > li{ position: relative; } /* Anker für Dropdown */
+
+/* Links im Menü (einheitlich) */
+.menu a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 10px;
+  transition: font-size .2s ease, color .2s ease, background-color .2s ease;
+  display: inline-block;
+}
+
+/* Hover-Effekt Hauptpunkte */
+.menu > li > a:hover{
+  color: rgb(0,128,0);
+  font-size: 18px;
+}
+
+/* Untermenü (versteckt) */
+.submenu{
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  min-width: 60px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.12);
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  display: none;
+  z-index: 3000;
+}
+
+/* Sichtbar bei Hover oder Fokus (für Tastatur/Touch) */
+.has-sub:hover > .submenu,
+.has-sub:focus-within > .submenu{
+  display: block;
+}
+
+/* Links im Dropdown */
+.submenu a{
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.submenu a:hover{ background: rgba(0,0,0,.06); }
+
+/* Hover-Brücke verhindert Abreißen beim Weg zum Dropdown */
+.has-sub::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 100%;
+  height: 10px;
+}
+
+/* Mobile Menü-Logik */
+@media (max-width: 800px){
+  .menu{ flex-wrap: wrap; gap: 12px 20px; }
+  .has-sub{ width: 100%; }
+  .submenu{
+    position: static;
+    display: none;       /* bleibt via :focus-within sichtbar */
+    margin-top: 8px;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 8px;
+  }
+  .has-sub:focus-within > .submenu{ display: block; }
+}
+
+/* =========================
+   Mainsection (News + Sidebar)
+   ========================= */
+.content-wrapper{
+  background-color: #fff;
+  width: 100%;
+  padding: 40px 0;
+  margin-top: 90px;
+}
+.content{
+  --sidebar-w: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-w);
+  gap: 24px;
+  align-items: start;
+}
+
+/* News Grid */
+.news-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Karten */
+.news-box{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.news-box:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+}
+.news-box img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.news-box p{
+  margin: 12px 16px 8px;
+  line-height: 1.45;
+  font-size: 15px;
+  flex: 1;
+}
+.read-more{
+  margin: 0 16px 16px;
+  color: rgb(46, 125, 50);
+  font-weight: 600;
+}
+
+/* Rechte Spalte Banner */
+.sidebar{ position: sticky; top: 16px; }
+.banner-link{
+  display: block;
+  height: 550px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+.banner-link img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.banner-link:hover{ animation: bannerWobble 1.2s ease-in-out infinite; }
+@keyframes bannerWobble{
+  0%   { transform: scale(1.02) rotate(0deg); }
+  25%  { transform: scale(1.04) rotate(0.8deg); }
+  50%  { transform: scale(1.02) rotate(-0.8deg); }
+  75%  { transform: scale(1.04) rotate(0.4deg); }
+  100% { transform: scale(1.02) rotate(0deg); }
+}
+
+/* Responsive Content */
+@media (max-width: 1100px){
+  .content{ grid-template-columns: 1fr; }
+  .news-grid{ grid-template-columns: repeat(2, 1fr); }
+  .sidebar{ position: static; }
+}
+@media (max-width: 700px){
+  .news-grid{ grid-template-columns: 1fr; }
+}
+
+/* === H A L L E N – I N F O =================================== */
+
+.hallen-info{
+  background: rgba(232,161,77,1);
+  padding: 32px 0 56px;
+}
+.hi-title{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 22px;
+  color: #000;
+  user-select: none;
+}
+.hi-grid{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Karten */
+.hi-card, .hi-map-card{
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  padding: 16px;
+}
+.hi-card h3{ margin: 0 0 12px; font-size: 22px; font-weight: 800; user-select: none; }
+.hi-list{ list-style: none; margin: 0 0 12px; padding: 0; user-select: none; }
+.hi-list li{ line-height: 1.35; user-select: none; }
+
+.hi-contact{ display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 10px; }
+.hi-chip{
+  display: inline-block;
+  background: #f5f5f5;
+  border-radius: 999px;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.hi-hints p{ margin: 6px 0; user-select: none; }
+
+.hi-map{ width: 100%; height: 320px; border: 0; border-radius: 10px; }
+.hi-map-actions{ display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+
+.hi-btn{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgb(231,158,71);
+  border: 1px solid rgba(0,0,0,.06);
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  cursor: pointer;
+}
+.hi-btn:hover{ filter: brightness(0.98); }
+
+/* Adresse & Kontakt soll nur unter Spalte 1 stehen */
+.hi-address{
+  grid-column: 1 / span 1;
+}
+
+/* === Trainingszeiten (UX-Polish) ========================= */
+.hi-trainings{
+  grid-column: 2 / span 2;          /* unter den 2 rechten Maps */
+  padding: 18px;
+}
+
+.hi-trainings h3{
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+/* Responsive, flexible Grid: 3 Spalten → 2 → 1 */
+.hi-train-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 980px){
+  .hi-trainings{ grid-column: 1 / -1; }
+  .hi-train-grid{ grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+@media (max-width: 620px){
+  .hi-train-grid{ grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.hi-train-item{
+  display: grid;
+  grid-template-rows: auto 1fr;     /* Titel fix, Liste füllt */
+  background: rgb(255, 253, 248);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  min-height: 132px;                /* gleiche Grundhöhe */
+}
+.hi-train-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.10);
+  border-color: rgba(0,0,0,.12);
+}
+
+.hi-train-item h4{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+/* kleiner, sanfter Badge hinter dem Titel (optional via <span class="badge">) */
+.hi-train-item h4 .badge{
+  font-size: 11px;
+  font-weight: 800;
+  background: rgba(232,161,77,.18); /* Vereinsorange transluzent */
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+/* Liste sauber, Marker leicht betont */
+.hi-train-item ul{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.5;
+  color: #222;
+  user-select: none;
+}
+.hi-train-item li::marker{ color: #e7a14f; }
+
+/* „Highlight“-Karte (z. B. Hobby/Offen für Alle) */
+.hi-train-item--highlight{
+  background: rgb(255, 253, 248);
+  border-color: rgba(231,158,71,.6);
+  box-shadow: 0 6px 18px rgba(231,158,71,.15);
+}
+.hi-train-item--highlight h4{
+  color: #000;
+  user-select: none;
+}
+.hi-train-item--highlight .flag{
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  background: #e7a14f;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* CTA unter dem Grid bündig */
+.hi-cta{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+.hi-cta .hi-btn{
+  background: rgb(231,158,71);
+  color: rgb(0, 0, 0);
+}
+.hi-cta .hi-btn:hover{ filter: none; opacity: .9; }
+
+
+/* =========================
+   Footer
+   ========================= */
+.footer{
+  background-color: #fff;
+  color: #000;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+}
+.footer-sponsors{ text-align:center; margin-bottom:10px; }
+.footer-sponsors h3{ margin-bottom:15px; font-size:1.2rem; }
+.sponsor-logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:100px;
+  flex-wrap:wrap;
+}
+.sponsor-logos a{ display:inline-block; }
+.sponsor-logos img{
+  max-height:120px;
+  object-fit:contain;
+  transition: transform .2s ease;
+}
+.sponsor-logos a:hover img{ transform: scale(1.05); }
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:.85rem;
+  flex-wrap:wrap;
+  border-top:1px solid rgba(0,0,0,.2);
+  padding-top:10px;
+  user-select:none;
+}
+.footer-links{ display:flex; gap:15px; }
+.footer-links a{ color:#000; text-decoration:none; }
+.footer-links a:hover{ text-decoration: underline; }
+@media (max-width: 600px){
+  .footer-bottom{ flex-direction: column; text-align: center; gap: 5px; }
+}
+
+/* Balken unter dem Footer */
+.footer-bar{
+  background-color: rgba(232, 161, 77, 1);
+  height: 20px;
+  width: 100%;
+}

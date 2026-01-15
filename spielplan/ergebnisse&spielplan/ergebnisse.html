@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TSV Lindau Basketball – Spielplan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/spielplan/ergebnisse&spielplan/ergebnisse.css">
+    <script src="/spielplan/ergebnisse&spielplan/ergebnisse.js" defer></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-inner">
+        <a href="/index.html" class="logo-link">
+            <img src="/assets/Header/TSVLogo1.png" alt="TSV Lindau Logo" class="logo-main">
+        </a>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/index.html">Startseite</a></li>
+                <li><a href="/teams/teams.html"">Teams</a></li>
+                <li><a href="/spielplan/spielplan.html" class="active">Spielplan</a></li>
+                <li><a href="/footer/presse/presse.html">Presse</a></li>
+                <li><a href="/kontakt/kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="hero-section">
+        <div class="hero-inner">
+            <h1>Spielplan – TSV Lindau Basketball</h1>
+            <p>
+                Spieltage, Ergebnisse und kommende Partien der TSV-Lindau-Teams.
+                Die Daten werden aus einer zentralen Spielplan-Datei geladen.
+            </p>
+        </div>
+    </section>
+
+    <section class="controls-section">
+        <div class="controls-inner">
+            <div class="control-group">
+                <label for="teamFilter">Team / Gegner:</label>
+                <input type="text" id="teamFilter" placeholder="z.B. Lindau, Isny, Kempten …">
+            </div>
+
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="futureOnly" checked>
+                    Nur kommende Spiele anzeigen
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule-section">
+        <h2>Spielplan Herren 1 – Bezirksklasse Schwaben Süd</h2>
+
+        <table class="schedule-table">
+            <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Uhrzeit</th>
+                <th>Heim</th>
+                <th>Gast</th>
+                <th>Ergebnis</th>
+            </tr>
+            </thead>
+            <tbody id="schedule-body">
+            <!-- wird per JS gefüllt -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-inner">
+        <p>&copy; <span id="currentYear"></span> TSV Lindau Basketball. Alle Rechte vorbehalten.</p>
+        <p class="footer-links">
+            <a href="/footer/impressum/impressum.html">Impressum</a> ·
+            <a href="/footer/datenschutz/datenschutz.html">Datenschutz</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

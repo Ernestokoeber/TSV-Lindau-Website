@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Probetraining & Anmeldung</title>
+                <link rel="stylesheet" href="../landingpage/TSV Lindau Basketball new.css">>
+                <link rel="stylesheet" href="probetraining.css">   <!--verlinkung zur CSS wohin,Type,Addresse-->
+                    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> <!--Schriftart von Google laden-->
+    </head>
+    
+    <body>
+        <header>
+            <div class="whiteline">
+                <nav class="main-nav" role="navigation" aria-label="Hauptmenü">
+                    <ul>
+                        <li><a href="/index.html">Startseite</a></li>
+                        <li><a href="/teams/teams.html">Teams</a></li>
+                        <li><a href="/kontakt/kontakt.html">Kontakt</a></li>
+                        <li><a href="/news/news.html">News</a></li>
+                    </ul>
+                </nav>               
+            </div>
+
+            <div class="smallline"></div>
+            
+            <section class="überschrift">
+                    <h2>Probetraining<br>Vereinsanmeldung</h2>
+            </section>
+            
+            <div><img class="TSVLogo1" src="/assets/Header/logo.png" alt="Hintergrundlogo"></div>
+        
+        </header>
+
+        <section class="anmeldung">
+            <form action="anmeldung_senden.php" method="POST">
+        
+
+                <!-- Probe Training oder Vereinsanmeldung-->
+
+                <fieldset>
+                    <legend>Art der Anmeldung</legend>
+                    <label>
+                        <input type="radio" name="anmeldung_art" value="probetraining" required>
+                        Probetraining
+                    </label>
+                    <label>
+                        <input type="radio" name="anmeldung_art" value="vereinsanmeldung" required>
+                        Vereinsanmeldung
+                    </label>
+
+                <!-- Persönliche Daten -->
+                <fieldset>
+                    <legend>Persönliche Daten</legend>
+
+                    <label for="vorname">Vorname*</label>
+                    <input type="text" id="vorname" name="vorname" required>
+
+                    <label for="nachname">Nachname*</label>
+                    <input type="text" id="nachname" name="nachname" required>
+
+                    <label for="geburtsdatum">Geburtsdatum*</label>
+                    <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+
+                    <label for="email">E-Mail*</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" id="telefon" name="telefon">
+                </fieldset>
+        
+                <!-- Vereinsinformationen -->
+                <fieldset>
+                    <legend>Vereinsinfos</legend>
+                        <label for="team">Team/Alterklasse</label>
+                            <select id="team" name="team">
+                                <option value="u12">U12</option>
+                                <option value="u14">U14</option>
+                                <option value="u16">U16</option>
+                                <option value="u18">U18</option>
+                                <option value="herren">Herren</option>
+                                <option value="ü40">Ü40</option>
+                            </select>
+                    <label for="erfahrung">Basketball-Erfahrung</label>
+                    <textarea id="erfahrung" name="erfahrung" rows="1" placeholder="Kurz beschreiben..."></textarea>
+                    
+                    <label for="interesse">Interesse am Verein</label>
+                    <textarea id="interesse" name="interesse" rows="1" placeholder="Kurz beschreiben..."></textarea>
+
+                    <label for="mitglied">Sind Sie bereits Mitglied im TSV Lindau?</label>
+                    <textarea id="mitglied" name="mitglied" rows="1" placeholder="ja oder nein..."></textarea>
+                </fieldset>
+        
+                <!-- Datenschutz -->
+                <fieldset>
+                    <legend>Datenschutz</legend>
+                    <label>
+                        <input type="checkbox" name="datenschutz" required>
+                        Ich stimme der Verarbeitung meiner Daten zu.*
+                    </label>
+                </fieldset>
+                <button type="submit">Anmelden</button>
+            </form>
+        </section>
+    
+    </body>
+</html

@@ -1,0 +1,178 @@
+/* =========================================
+   Zusatz-Styles für Spielplan-Seite
+   Farbschema wie Landingpage:
+   - Hintergrund: rgb(232, 161, 77)
+   - Content: weiß
+   - Text: schwarz
+   - Akzent: Vereinsgrün / Orange
+   ========================================= */
+
+/* Hauptbereich Spielplan – sitzt auf deinem orangen Body */
+.page-main{
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 40px 16px 60px 16px;
+}
+
+/* Hero-Block unter dem großen Headerbild */
+.hero-section{
+    margin-bottom: 24px;
+}
+
+.hero-inner{
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 24px 28px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-inner::after{
+    content: "TSV";
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-family: "Monoton", sans-serif;
+    font-size: 110px;
+    color: rgba(0,0,0,0.05);
+    pointer-events: none;
+}
+
+.hero-inner h1{
+    margin: 0 0 8px;
+    font-size: 1.9rem;
+    color: #000;
+}
+
+.hero-inner p{
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Filter / Controls */
+
+.controls-section{
+    margin-bottom: 18px;
+}
+
+.controls-inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #000;
+}
+
+#teamFilter{
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    min-width: 220px;
+}
+
+/* Tabelle */
+
+.schedule-section h2{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.schedule-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.schedule-table thead{
+    background: #f3f3f3;
+}
+
+.schedule-table th,
+.schedule-table td{
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: left;
+    color: #000;
+}
+
+.schedule-table th{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #555;
+}
+
+.schedule-row:nth-child(even){
+    background: #fafafa;
+}
+
+/* Vergangene Spiele leicht abgeblendet */
+.schedule-row.past{
+    color: #777;
+}
+
+/* Nächstes Spiel hervorgehoben – Orange wie Landingpage */
+.schedule-row.next-game{
+    background: rgba(232,161,77,0.22);
+    font-weight: 600;
+}
+
+/* Kleinere Anpassungen für Mobile */
+
+@media (max-width: 768px){
+    .page-main{
+        padding: 24px 12px 40px 12px;
+    }
+
+    .hero-inner{
+        padding: 18px 18px;
+    }
+
+    .hero-inner::after{
+        font-size: 80px;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .schedule-table th,
+    .schedule-table td{
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+/* =======================================
+   Footer immer unten fixieren
+   ======================================= */
+
+html, body {
+    height: 100% !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+main.page-main {
+    flex: 1 0 auto !important;
+}
+
+footer.footer {
+    flex-shrink: 0 !important;
+}
+
+}

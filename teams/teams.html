@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>TSV Lindau Basketball – Teams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Haupt-CSS für die Team-Landing-Page -->
+    <link rel="stylesheet" href="/teams/teams.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/Header/logo.png" alt="TSV Lindau Basketball Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">TSV Lindau</span>
+                    <span class="logo-sub">Basketball</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <a href="/index.html">Startseite</a>
+                <a href="/teams/teams.html" class="active">Teams</a>
+                <a href="/footer/presse/presse.html">Presse</a>
+                <a href="/kontakt/kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Einleitung -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unsere Teams</h1>
+                <p>
+                    Von der U12 bis zu den Herren und Ü40 – hier findest du alle Teams des
+                    TSV Lindau Basketball mit kurzer Vorstellung und direktem Zugang zu den Teamseiten.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filterleiste -->
+        <section class="team-filter-section">
+            <div class="filter-header">
+                <h2>Finde dein Team</h2>
+                <p>Filtere nach Bereich oder nutze die Suche – auch nach Jahrgängen.</p>
+            </div>
+
+            <div class="filter-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Alle</button>
+                    <button class="filter-btn" data-filter="herren">Herren</button>
+                    <button class="filter-btn" data-filter="jugend">Jugend (U18–U12)</button>
+                    <button class="filter-btn" data-filter="ue40">Ü40</button>
+                </div>
+                <div class="filter-search">
+                    <input type="text" id="teamSearch" placeholder="z. B. 2013, U16, Ü40 …" aria-label="Team-Suche">
+                </div>
+            </div>
+        </section>
+
+        <!-- Team-Kacheln -->
+        <section class="teams-grid" aria-label="Übersicht Teams">
+            <!-- Herren -->
+            <article class="team-card"
+                     data-category="herren"
+                     data-tags="herren herrenmannschaft bezirksliga lindau">
+                <div class="team-tag">Herren</div>
+                <h3>Herren</h3>
+                <p class="team-league">Liga: Bezirksliga (aktuell)</p>
+                <p class="team-info">
+                    Unsere Herrenmannschaft steht für intensive Defense, hohes Tempo und klaren Team-Basketball.
+                    Hier fließen Erfahrung und Jugend zusammen.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Ernesto / Coaching Staff</li>
+                    <li><strong>Trainingszeiten:</strong> Di &amp; Fr · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/herren1/herren1.html" class="team-link">Zur Teamseite</a>
+            </article>
+
+            <!-- U18 -->
+            <article class="team-card"
+                     data-category="jugend"
+                     data-year-from="2007"
+                     data-year-to="2010"
+                     data-tags="u18 jugend jahrgang 2007 2008 2009 2010 2010 und jünger">
+                <div class="team-tag">U18</div>
+                <h3>U18</h3>
+                <p class="team-league">Jahrgänge: 2007 und jünger (bis ca. 2010)</p>
+                <p class="team-info">
+                    Leistungsorientierte Jugendarbeit für den Übergang in den Herrenbereich. Fokus auf
+                    Entscheidungsverhalten, Athletik und Teamplay auf hohem Niveau.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Jugend-Coaching Team</li>
+                    <li><strong>Trainingszeiten:</strong> 2–3× wöchentlich · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/u18/u18.html" class="team-link">Zur Teamseite</a>
+            </article>
+
+            <!-- U16 -->
+            <article class="team-card"
+                     data-category="jugend"
+                     data-year-from="2009"
+                     data-year-to="2012"
+                     data-tags="u16 jugend jahrgang 2009 2010 2011 2012 2012 und jünger">
+                <div class="team-tag">U16</div>
+                <h3>U16</h3>
+                <p class="team-league">Jahrgänge: 2009 und jünger (bis ca. 2012)</p>
+                <p class="team-info">
+                    Technische und taktische Ausbildung, erste komplexere Systeme und klare Rollenverteilung im Team.
+                    Vorbereitung auf das U18- und Herrenlevel.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Jugend-Coaching Team</li>
+                    <li><strong>Trainingszeiten:</strong> 2× wöchentlich · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/u16/u16.html" class="team-link">Zur Teamseite</a>
+            </article>
+
+            <!-- U14 -->
+            <article class="team-card"
+                     data-category="jugend"
+                     data-year-from="2011"
+                     data-year-to="2014"
+                     data-tags="u14 jugend jahrgang 2011 2012 2013 2014 2014 und jünger">
+                <div class="team-tag">U14</div>
+                <h3>U14</h3>
+                <p class="team-league">Jahrgänge: 2011 und jünger (bis ca. 2014)</p>
+                <p class="team-info">
+                    Ausbau der Grundtechniken, erstes systematisches Teamspiel und viel Spielzeit für
+                    alle Spielerinnen und Spieler.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Jugend-Coaching Team</li>
+                    <li><strong>Trainingszeiten:</strong> 2× wöchentlich · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/u14/u14.html" class="team-link">Zur Teamseite</a>
+            </article>
+
+            <!-- U12 -->
+            <article class="team-card"
+                     data-category="jugend"
+                     data-year-from="2013"
+                     data-year-to="2018"
+                     data-tags="u12 jugend jahrgang 2013 2014 2015 2016 2017 2018 2013 und jünger">
+                <div class="team-tag">U12</div>
+                <h3>U12</h3>
+                <p class="team-league">Jahrgänge: 2013 und jünger (ca. 2013–2018)</p>
+                <p class="team-info">
+                    Spielerischer Einstieg in das Wettkampfspiel mit Fokus auf Spaß, Bewegung und saubere
+                    Technik – der perfekte Aufbau in Richtung U14.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Jugend-Coaching Team</li>
+                    <li><strong>Trainingszeiten:</strong> 2× wöchentlich · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/u12/u12.html" class="team-link">Zur Teamseite</a>
+            </article>
+
+            <!-- Ü40 -->
+            <article class="team-card"
+                     data-category="ue40"
+                     data-tags="ü40 senioren herren freizeit 40 plus">
+                <div class="team-tag">Ü40</div>
+                <h3>Ü40</h3>
+                <p class="team-league">Für Spieler ab 40 Jahren</p>
+                <p class="team-info">
+                    Basketball für erfahrene Spieler, die weiterhin aktiv bleiben wollen – mit Wettkampfcharakter,
+                    aber angepasstem Tempo und viel Gemeinschaft.
+                </p>
+                <ul class="team-meta">
+                    <li><strong>Trainer:</strong> Senioren-Coaching Team</li>
+                    <li><strong>Trainingszeiten:</strong> nach Absprache · Dreifachhalle Lindau</li>
+                </ul>
+                <a href="/teams/ueber40/ueber40.html" class="team-link">Zur Teamseite</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; TSV Lindau Basketball – <span id="footerYear"></span></p>
+            <div class="footer-links">
+                <a href="/footer/impressum/impressum.html">Impressum</a>
+                <a href="/footer/datenschutz/datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/teams/teams.js"></script>
+</body>
+</html>

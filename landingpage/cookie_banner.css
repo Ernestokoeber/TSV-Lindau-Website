@@ -1,0 +1,147 @@
+
+.cookie-banner {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cookie-banner-inner {
+  max-width: 700px;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.cookie-banner h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.cookie-banner p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.cookie-categories {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cookie-category {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.cookie-category label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.cookie-category input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.cookie-category-desc {
+  margin-left: 1.9rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.cookie-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #004b2b;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: #004b2b;
+  border: 1px solid #004b2b;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.btn-secondary:hover,
+.btn-tertiary:hover {
+  background: #d1d5db;
+  color: #111827;
+}
+
+.cookie-more-info {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.cookie-more-info a {
+  color: #004b2b;
+  text-decoration: underline;
+}
+
+/* Hidden State */
+.cookie-banner.hidden {
+  display: none;
+}
+
+/* Settings Button (Footer) */
+.cookie-settings-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: none;
+  background: #004b2b;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 9998;
+  opacity: 0.85;
+}
+
+.cookie-settings-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner-inner {
+    padding: 1.25rem 1.25rem;
+  }
+}
